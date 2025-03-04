@@ -13,7 +13,7 @@ export default function Home() {
             .slice(0, 6)
             .map((article, index) => (
               <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img src={article.urlToImage} alt="news" className="w-full h-48 object-cover" />
+                <img src={article.urlToImage || ''} alt="news" className="w-full h-48 object-cover" />
                 <div className="p-4">
                   <h2 className="text-xl font-bold mb-2">{article.title}</h2>
                   <p className="text-gray-700 mb-4">{article.description}</p>
