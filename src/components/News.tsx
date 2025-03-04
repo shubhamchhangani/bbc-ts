@@ -1,22 +1,27 @@
-type articleProp = {
-    articles: any;
-}
+import data from '../data/data.json';
 
-function News(props: articleProp) {
-    //console.log(props.articles);
-    return (
-       <div className="grid md:grid-cols-3">
-        <div className="my-4 mx-4">
-            <h1 className="text-5xl font-semibold">{props?.articles?.articles[4].title}</h1>
-            <p>{props?.articles?.articles[8]?.description}</p>
+function News() {
+return (
+<div>
+    <div>
+    <h1 className="text-5xl font-semibold text-red-800 ml-3">NEWS</h1>
+    <hr className="h-px bg-black border-0 mx-3"/>
+    </div>
+<div className="grid md:grid-cols-3 gap-6 p-6">
+            {data.articles
+                .filter(article => article.urlToImage) // Filter articles with image URL
+                .map((article, index) => (
+                    <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src={article.urlToImage} alt="news" className="w-full h-48 object-cover" />
+                        <div className="p-4">
+                            <h1 className="text-xl font-bold mb-2">{article.title}</h1>
+                            <p className="text-gray-700">{article.description}</p>
+                        </div>
+                    </div>
+                ))}
         </div>
-        <img src={props?.articles?.articles[8]?.urlToImage} alt="news" className="h-96 my-4" />
-        <div className="my-4 mx-4">
-            <img src={props?.articles?.articles[9]?.urlToImage} alt="news" className="h-48 w-full object-cover" />
-            <h1 className="text-base font-medium">{props?.articles?.articles[5]?.title}</h1>
-            <p>{props?.articles?.articles[9]?.description}</p>
-        </div>
-       </div>
+</div>
+
     )
 }
 

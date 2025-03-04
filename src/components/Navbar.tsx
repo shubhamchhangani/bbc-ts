@@ -1,6 +1,7 @@
 import hamburger from '../assets/more.png';
 import search from '../assets/search.png';
 import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   return (
@@ -13,8 +14,8 @@ function Navbar() {
                 <img src={logo} className='w-24 h-24'/>
             </div>
             <div className='flex'>
-                <h1 className='bg-black font-semibold my-7 mx-1 px-3 py-1 text-white w-20 h-10 hidden sm:block'>Register</h1>
-                <h1 className='text-black font-semibold py-1 my-7 mx-1 px-3 h-10 hover:bg-black hover:text-white w-20 hidden sm:block'>Sign In</h1>
+               <Link to="/" ><h1 className='bg-black font-semibold my-7 mx-1 px-3 py-1 text-white w-20 h-10 hidden sm:block'>Register</h1></Link> 
+               <Link to="/signin"><h1 className='text-black font-semibold py-1 my-7 mx-1 px-3 h-10 hover:bg-black hover:text-white w-20 hidden sm:block'>Sign In</h1></Link> 
             </div>
         
     </div>
