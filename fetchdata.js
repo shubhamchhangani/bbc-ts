@@ -1,0 +1,1 @@
+fetch("https://newsapi.org/v2/everything?q=Geography&from=2025-02-04&sortBy=popularity&apiKey=4187e475baf44025a14d77cbf4de928f").then(data => data.json()).then(data => console.log(data));

@@ -1,10 +1,10 @@
-import data from '../data/earth.json';
+import data from '../data/culture.json';
 
-function Earth() {
+function Culture() {
 return (
 <div>
     <div>
-    <h1 className="text-5xl font-semibold text-red-800 ml-3">EARTH</h1>
+    <h1 className="text-5xl font-semibold text-red-800 ml-3">BUSINESS</h1>
     <hr className="h-px bg-black border-0 mx-3"/>
     </div>
 <div className="grid md:grid-cols-3 gap-6 p-6">
@@ -25,4 +25,4 @@ return (
     )
 }
 
-export default Earth;
+export default Culture;

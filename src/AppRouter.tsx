@@ -8,6 +8,8 @@ import Home from "./components/Home";
 import Sports from "./components/Sports";
 import Business from "./components/Business";
 import Innovation from "./components/Innovation";
+import Culture from "./components/Culture";
+import Travel from "./components/Travel";
 const AppRouter = () => {
   return(
     <div>
@@ -15,7 +17,7 @@ const AppRouter = () => {
     <Menu />
     <div className="content">
       <Routes>
-        <Route path="/" element={<News />} />
+        <Route path="/" element={<Home />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/earth" element={<Earth />} />
         {/* Add more routes here */}
@@ -24,6 +26,8 @@ const AppRouter = () => {
         <Route path="/sport" element={<Sports />} />
         <Route path="/business" element={<Business />} />
         <Route path="/innovation" element={<Innovation />} />
+        <Route path="/culture" element={<Culture />} />
+        <Route path="/travel" element={<Travel />} />
       </Routes>
     </div>
   </div>
