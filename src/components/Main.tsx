@@ -1,9 +1,11 @@
+import Home from "./Home";
 import Signin from "./Signin";
 
 function Main() {
   return (
     <div>
-      <Signin />
+      {/*<Signin />*/}
+      <Home />
     </div>
   );
 }
